@@ -1,7 +1,7 @@
 // src/components/Login.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '/Users/tanvirakhtershakib/secure-share/src/components/style/Login.css'; 
+import '/Users/tanvirakhtershakib/Documents/GitHub/Secured-Share/src/components/style/Login.css'; 
 
 const Login = () => {
   const [username, setUsername] = useState('');

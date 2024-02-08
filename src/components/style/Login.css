@@ -1,58 +1,58 @@
-div {
-    text-align: center;
-    margin: 50px auto;
-  }
-  
-  /* Style for the Login form */
-  form {
-    display: inline-block;
-    text-align: left;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-  }
-  
-  /* Style for the form labels */
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the form inputs */
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-  /* Style for the Login button */
-  button {
-    background-color: #054455;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #4fa3d1;
-  }
-  
-  /* Style for the "Don't have an account?" and "Forgot your password?" links */
-  p {
-    margin-top: 20px;
-  }
-  
-  /* Style for the footer */
-  .App-footer {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
+/* src/components/LoginSignup.css */
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-text {
+  color: #666;
+}

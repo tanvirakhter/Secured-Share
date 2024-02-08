@@ -1,40 +1,54 @@
-// src/components/Login.js
+// src/components/LoginSignup.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '/Users/tanvirakhtershakib/Documents/GitHub/Secured-Share/src/components/style/Login.css'; 
 
-const Login = () => {
+
+const LoginSignup = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLogin, setIsLogin] = useState(true);
 
   const handleLogin = () => {
-    // Add your login logic here
     console.log('Logging in with:', { username, password });
+  };
+
+  const handleSignup = () => {
+    console.log('Signing up with:', { username, email, password });
+  };
+
+  const handleToggle = () => {
+    setIsLogin(!isLogin);
   };
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>{isLogin ? 'Login' : 'Signup'}</h2>
       <form>
         <label>
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
-        <br />
+        {!isLogin && (
+          <label>
+            Email:
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </label>
+        )}
         <label>
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
-        <Link to="/profile-update">
-        <button>Login</button>
-      </Link>
+        {isLogin ? (
+          <button type="button" onClick={handleLogin}>Login</button>
+        ) : (
+          <button type="button" onClick={handleSignup}>Signup</button>
+        )}
       </form>
       <p>
-        Don't have an account? <Link to="/signup">Signup</Link>
-      </p>
-      <p>
-        Forgot your password? <Link to="/forget-password">Reset Password</Link>
+        {isLogin ? "Don't have an account? " : "Already have an account? "}
+        <button onClick={handleToggle}>{isLogin ? 'Signup' : 'Login'}</button>
       </p>
       <footer className="App-footer">
         <p>&copy; 2024 Tanvir Akhter Shakib</p>
@@ -43,4 +57,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginSignup;

@@ -11,7 +11,7 @@ import AdminDashboard from './components/AdminPanel/AdminDashboard';
 function LandingPage() {
   return (
     <div>
-      <h2>Secured Share</h2>
+        <h2>Secured Share</h2>
       <p>Share your documents in a secured way. Get your properties today.</p>
       <div>
       <Link to="/login">
@@ -19,9 +19,11 @@ function LandingPage() {
       </Link>
       </div>
       <div>
+        <text>Are you an admin? </text>
       <Link to="/admin-login">
-        <button>Admin</button>
+        <text>Admin Login</text>
       </Link>
+        <text> here.</text>
       </div>
       <footer className="App-footer">
         <p>&copy; 2024 Tanvir Akhter Shakib</p>
